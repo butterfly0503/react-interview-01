@@ -34,40 +34,42 @@ const Teams = () => {
   }, []);
 
   return (
-    <div className="p-3">
-      <h2>Teams</h2>
-      <div className="table-responsive">
-        <table className="table table-striped table-hover align-middle">
-          <thead className="table-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Venue</th>
-              <th scope="col">Club</th>
-              <th scope="col">Location</th>
-              <th scope="col">Division</th>
-            </tr>
-          </thead>
-          <tbody>
-            {teams.map(
-              (
-                { teamId, name, venue, clubName, locationName, division },
-                id
-              ) => (
-                <Team
-                  key={teamId}
-                  id={id}
-                  teamId={teamId}
-                  name={name}
-                  venue={venue}
-                  clubName={clubName}
-                  locationName={locationName}
-                  division={division}
-                />
-              )
-            )}
-          </tbody>
-        </table>
+    <div className="App container">
+      <div className="p-3">
+        <h2>Teams</h2>
+        <div className="table-responsive">
+          <table className="table table-striped table-hover align-middle">
+            <thead className="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Venue</th>
+                <th scope="col">Club</th>
+                <th scope="col">Location</th>
+                <th scope="col">Division</th>
+              </tr>
+            </thead>
+            <tbody>
+              {teams.map(
+                (
+                  { teamId, name, venue, clubName, locationName, division },
+                  id
+                ) => (
+                  <Team
+                    key={teamId}
+                    id={id}
+                    teamId={teamId}
+                    name={name}
+                    venue={venue}
+                    clubName={clubName}
+                    locationName={locationName}
+                    division={division}
+                  />
+                )
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
